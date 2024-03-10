@@ -1,0 +1,60 @@
+/* Updated CSS with space between buttons */
+
+.header {
+    width: 110%;
+    height: 30px;
+    background: rgb(220, 2, 2);
+    line-height: 30px;
+    color: white;
+}
+
+.content {
+    width: 100%;
+    height: calc(100% - 50px);
+    background: rgb(255, 255, 255);
+}
+
+.footer {
+    width: 110%;
+    height: 30px;
+    background: rgb(220, 2, 2);
+    color: white;
+    font-size: 9pt;
+    line-height: 20px;
+    text-align: center;
+}
+
+.menubar {
+    width: 200px;
+    padding: 10px;
+    height: calc(100% - 20px);
+    background: whitesmoke;
+    float: left;
+}
+
+.menubar button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px; /* Add space between buttons vertically */
+}
+
+.outlet {
+    width: calc(100% - 220px);
+    height: 100%;
+    float: left;
+}
+
+.textboxes-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.textboxes-container input {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+}
