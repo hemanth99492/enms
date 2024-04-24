@@ -11,7 +11,9 @@ import Login1 from './login'
 import Login from './Emplogin';
 import EmpHome from './EmpHome';
 import Apply from './Apply';
-
+import './App.css'
+import About from './About';
+import Contactus from './Contactus'
 function Website(){
   return(
     <BrowserRouter>
@@ -25,7 +27,8 @@ function Website(){
         <Route path='/mlogin' element={<SignIn/>}/>
         <Route path='/elogin' element={<Login/>}/>
         <Route path='/apply' element={<Apply />} />
-    
+        <Route path='/about' element={<About/>}/>
+        <Route path='/contact' element={<Contactus/>}/>
 
 
         

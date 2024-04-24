@@ -54,7 +54,7 @@ export default function Login() {
           }
           else
           {
-            alert('Incorrect username or password')
+            alert('Incorrect username or password') 
           }
         } catch (error) {
           console.error('Error submitting the form:', error);

@@ -65,7 +65,7 @@ function EmpNav() {
               <Tabs>
                 <Tab style={{ ...tabStyle }} label='Home' component={Link} to='' />
                 {/*<Tab style={{ ...tabStyle }} label='Apply Leave' />*/}
-                <Tab style={{ ...tabStyle }} label='Apply Leave' component={Link} to='applyleave' />
+                <Tab style={{ ...tabStyle }} label='Apply Leave' component={Link} to='/apply' />
                 <Tab style={{ ...tabStyle }} label='Profile' component={Link} onClick={handleProfile} to='/profile' />
                 <Tab style={{ ...tabStyle }} label='Change Password' component={Link} to='/changepwd' />
               </Tabs>

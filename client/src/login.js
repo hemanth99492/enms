@@ -31,10 +31,10 @@ function Login() {
           <Toolbar>
             <React.Fragment>
               <Tabs>
-                <Tab style={{ ...tabStyle }} label='Home' />
-                <Tab style={{ ...tabStyle }} label='About' />
+                <Tab style={{ ...tabStyle }} label='Home'  />
+                <Tab style={{ ...tabStyle }} label='About' component={Link} to='/about' />
                 <Tab style={{ ...tabStyle }} label='Help' />
-                <Tab style={{ ...tabStyle }} label='Contactus' />
+                <Tab style={{ ...tabStyle }} label='Contactus'component={Link} to='/contact' />
                 <Tab
                   style={{ ...tabStyle }}
                   label='Login'
