@@ -16,7 +16,7 @@ function ForgotPassword() {
     setError(null);
 
     try {
-      const response = await axios.post('http://localhost:5000/resetpassword', {
+      const response = await axios.post('https://enms-xi.vercel.app/resetpassword', {
         email,
       });
       
