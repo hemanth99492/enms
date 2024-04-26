@@ -32,7 +32,7 @@ function EmpNav() {
   const userEmail = getSession("emailid");
   const handleProfile = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/profiledata', {
+      const response = await axios.get('https://enms-xi.vercel.app/profiledata', {
         params: {
           emailid: userEmail,
         },
