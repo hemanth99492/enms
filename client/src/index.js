@@ -7,18 +7,19 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import ChangePassword from './Changepassword';
 import Profile from './Profile';
 import SignIn from './ManagerLogin';
-import Login1 from './login'
+import IndexHome from './IndexHome'
 import Login from './Emplogin';
 import EmpHome from './EmpHome';
 import Apply from './Apply';
 import './App.css'
 import About from './About';
 import Contactus from './Contactus'
+import Help from './Help'
 function Website(){
   return(
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login1/>}></Route>
+        <Route path="/" element={<IndexHome/>}></Route>
         <Route path='/home' element={<Home/>} />
         <Route path='/addemployee' element={<AddEmployee/>}/>
         <Route path='/changepwd' element={<ChangePassword/>}/>
@@ -29,6 +30,7 @@ function Website(){
         <Route path='/apply' element={<Apply />} />
         <Route path='/about' element={<About/>}/>
         <Route path='/contact' element={<Contactus/>}/>
+        <Route path='/Help' element={<Help/>}/>
 
 
         

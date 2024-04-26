@@ -33,7 +33,7 @@ function Login() {
               <Tabs>
                 <Tab style={{ ...tabStyle }} label='Home'  />
                 <Tab style={{ ...tabStyle }} label='About' component={Link} to='/about' />
-                <Tab style={{ ...tabStyle }} label='Help' />
+                <Tab style={{ ...tabStyle }} label='Help' component={Link} to='/help'/>
                 <Tab style={{ ...tabStyle }} label='Contactus'component={Link} to='/contact' />
                 <Tab
                   style={{ ...tabStyle }}
