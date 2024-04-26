@@ -1,0 +1,56 @@
+.apply-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .apply-form {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .apply-table {
+    width: 100%;
+  }
+  
+  .apply-table td {
+    padding: 10px;
+  }
+  
+  .apply-table input[type="text"],
+  .apply-table input[type="date"],
+  .apply-table textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .apply-table textarea {
+    height: 80px;
+  }
+  
+  .apply-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .apply-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .apply-button:active {
+    background-color: #0056b3;
+  }
+  

@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const {MongoClient} = require('mongodb');
+const { ObjectId } = require('mongodb');
 
 const app = express();
 app.use(express.json());
@@ -130,3 +131,38 @@ app.post('/login/signin', (req, res) => {
     // Handle employee login logic here
     // ...
   });
+  app.post('/apply-leave', async (req, res) => {
+    try {
+        conn = await client.connect();
+      db = conn.db('ENMS');
+      users = db.collection('Leave');
+      data = await users.insertOne(req.body);
+      conn.close();
+      res.send('added'); // Send JSON response with the message and data
+    } catch (e) {
+      console.log(e);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  });
+  app.get('/api/user/:userId', async (req, res) => {
+    try {
+      const userId = req.params.userId;
+  
+      // Query MongoDB for the user with the provided ID
+      const user = await User.findById(userId);
+  
+      // If user is not found, return 404 Not Found
+      if (!user) {
+        return res.status(404).json({ error: 'User not found' });
+      }
+  
+      // If user is found, return the user data
+      res.json(user);
+    } catch (error) {
+      console.error('Error retrieving user data:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  });
+
+  
+  

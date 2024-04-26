@@ -7,11 +7,28 @@ const ApplyLeaveForm = () => {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [reason, setReason] = useState('');
+  const [error, setError] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Add your logic for handling form submission here
-    console.log('Leave application submitted:', { leaveType, startDate, endDate, reason });
+    try {
+      // Here you can make an axios request to send the form data to your backend
+      const response = await axios.post('http://localhost:5000/apply-leave', {
+        type: leaveType,
+        sdate: startDate,
+        edate : endDate,
+        lreson: reason
+      });
+      console.log('submitted:', response.data);
+      // Optionally, you can reset the form fields after successful submission
+      setLeaveType('');
+      setStartDate('');
+      setEndDate('');
+      setReason('');
+    } catch (error) {
+      setError('An error occurred while submitting the form. Please try again.');
+      console.error('Error submitting leave application:', error);
+    }
   };
 
   return (
@@ -19,7 +36,54 @@ const ApplyLeaveForm = () => {
       <form className="apply-form" onSubmit={handleSubmit}>
         <table className="apply-table">
           <tbody>
-            {/* ... (rest of the code) */}
+            <tr>
+              <td>Leave Type:</td>
+              <td>
+                <input
+                  type="text"
+                  value={leaveType}
+                  onChange={(e) => setLeaveType(e.target.value)}
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Start Date:</td>
+              <td>
+                <input
+                  type="date"
+                  value={startDate}
+                  onChange={(e) => setStartDate(e.target.value)}
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>End Date:</td>
+              <td>
+                <input
+                  type="date"
+                  value={endDate}
+                  onChange={(e) => setEndDate(e.target.value)}
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Reason:</td>
+              <td>
+                <textarea
+                  value={reason}
+                  onChange={(e) => setReason(e.target.value)}
+                  required
+                ></textarea>
+              </td>
+            </tr>
+            {error && (
+              <tr>
+                <td colSpan="2" style={{ color: 'red' }}>{error}</td>
+              </tr>
+            )}
           </tbody>
         </table>
 
@@ -30,4 +94,3 @@ const ApplyLeaveForm = () => {
 };
 
 export default ApplyLeaveForm;
- 

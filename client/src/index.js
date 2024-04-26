@@ -15,6 +15,8 @@ import './App.css'
 import About from './About';
 import Contactus from './Contactus'
 import Help from './Help'
+import ForgotPassword from './ForgotPassword';
+
 function Website(){
   return(
     <BrowserRouter>
@@ -31,6 +33,10 @@ function Website(){
         <Route path='/about' element={<About/>}/>
         <Route path='/contact' element={<Contactus/>}/>
         <Route path='/Help' element={<Help/>}/>
+        <Route path='/Managerlogin/forgotpassword' element={<ForgotPassword/>}/>
+        <Route path='/Emplogin/forgotpassword' element={<ForgotPassword/>}/>
+
+
 
 
         

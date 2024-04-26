@@ -1,0 +1,30 @@
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .profile-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .profile-info {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .profile-info h3 {
+    margin: 5px 0;
+  }
+  
+  .profile-info p {
+    margin: 0;
+  }
+  
+  /* Customize as needed */
+  
