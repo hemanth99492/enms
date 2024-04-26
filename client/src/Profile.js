@@ -8,7 +8,7 @@ function Profile() {
     const fetchUserData = async () => {
       try {
         const userId = 'admin@gmail.com'; // Replace 'user_id_here' with the actual user ID
-        const response = await fetch(`http://localhost:5000/api/user/${userId}`);
+        const response = await fetch(`https://enms-xi.vercel.app/api/user/${userId}`);
         const userData = await response.json();
         setUser(userData);
         console.log(userData)
