@@ -44,7 +44,7 @@ export default function Login() {
         });
     
         try {
-          const response = await axios.post('http://localhost:5000/managerlogin', {
+          const response = await axios.post('https://enms-xi.vercel.app/managerlogin', {
             email: data.get('email'),
             password: data.get('password'),
           });
